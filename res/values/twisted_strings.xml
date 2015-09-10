@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Pure Nexus Project
+     Copyright (C) 2016 Flash ROM
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About phone screen, build date of ROM -->
+    <string name="build_date">Twisted build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+
+    <!-- Twisted Core Settings -->
+    <string name="twistedcore_title">Twisted Core</string>
+
+    <!-- Changelog fragment -->
+    <string name="changelog_crdroid_title">Changelog</string>
+    <string name="changelog_crdroid_error">Unable to load changelog</string>
+
+    <!-- StatusBar fragment -->
+    <string name="statusbar_twisted_title">Statusbar</string>
+    <string name="statusbar_twisted_summary">Modify: Battery, Clock, Network traffic, and more.</string>
+
+    <!-- Display fragment -->
+    <string name="display_twisted_title">Display</string>
+    <string name="display_twisted_summary">Modify: Expanded desktop, Gestures, Scrolling cache, and more.</string>
+
+    <!-- Navgationbar fragment -->
+    <string name="navigationbar_twisted_title">Navigationbar</string>
+    <string name="navigationbar_twisted_summary">Modify: Interface mode (e.g., Smartbar, Fling), Pulse, and more.</string>
+
+    <!-- Blur fragment -->
+    <string name="blur_twisted_title">Blur </string>
+    <string name="blur_twisted_summary">Modify: Expanded Statusbar, Quick Settings, Recents, and more.</string>
+
+    <!-- Keyguard fragment -->
+    <string name="keyguard_twisted_title">Keyguard </string>
+    <string name="keyguard_twisted_summary">Modify: Items on lockscreen, Clock font, and more.</string>
+
+    <!-- Power Menu fragment -->
+    <string name="powermenu_twisted_title">Power menu</string>
+    <string name="powermenu_twisted_summary">Modify: Items on power menu dialog.</string>
+
+    <!-- Quick Settings fragment -->
+    <string name="quicksettings_twisted_title">Quicksettings</string>
+    <string name="quicksettings_twisted_summary">Modify: Notification header, Gestures, Tiles (e.g., Columns, Rows, etc), and more.</string>
+
+    <!-- Volume Rocker fragment -->
+    <string name="volumerocker_twisted_title">Volume rocker</string>
+    <string name="volumerocker_twisted_summary">Modify: Different actions for volume buttons.</string>
+
+    <!-- Volume settings - Volume adjustment sound -->
+    <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
+
+    <!-- ADB debugging notifications -->
+    <string name="enable_adb_custom">Android debugging</string>
+    <string name="enable_adb_summary_custom">Enable the Android Debug Bridge (adb) interface</string>
+    <string name="adb_notify">ADB notification</string>
+    <string name="adb_notify_summary">Display a notification when USB or network debugging is enabled</string>
+    <string name="adb_over_network">ADB over network</string>
+    <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi\u2011Fi, USB networks). This setting is reset on reboot</string>
+    <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks!\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
+
+    <!-- Volume Key Rotation -->
+    <string name="swap_volume_buttons_title">Reorient</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
+
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Volume rocker wake</string>
+    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
+
+    <!-- Volume rocker music control -->
+    <string name="volume_rocker_music_controls_title">Playback control</string>
+    <string name="volume_rocker_music_controls_summary">When the screen is off, long-pressing the volume keys will seek music tracks</string>
+
+    <!-- Power menu customization -->
+    <string name="power_menu_reboot_title">Reboot</string>
+    <string name="power_menu_screenshot_title">Screenshot</string>
+    <string name="power_menu_onthego_title">On-The-Go Mode</string>
+    <string name="power_menu_airplane_title">Airplane mode</string>
+    <string name="power_menu_users_title">User switcher</string>
+    <string name="power_menu_search_title">Search</string>
+    <string name="power_menu_voice_title">Voice search</string>
+    <string name="power_menu_settings_title">Settings shortcut</string>
+    <string name="power_menu_lockdown_title">Device lockdown</string>
+    <string name="power_menu_bug_report_title">Bug report</string>
+    <string name="power_menu_sound_title">Sound panel</string>
+    <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
+
+    <!-- Dev Options Enabled by Default -->
+    <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
+
+   <!-- Phone info shortcut -->
+    <string name="device_info_title">Phone info</string>
+
+    <!-- Volume Steps -->
+    <string name="volume_steps_title">Volume steps</string>
+    <string name="volume_steps_alarm_title">Volume steps: Alarm</string>
+    <string name="volume_steps_dtmf_title">Volume steps: DTMF</string>
+    <string name="volume_steps_music_title">Volume steps: Music</string>
+    <string name="volume_steps_notification_title">Volume steps: Notification</string>
+    <string name="volume_steps_ring_title">Volume steps: Ringer</string>
+    <string name="volume_steps_system_title">Volume steps: System</string>
+    <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
+    <string name="volume_steps_reset">Reset</string>
+    <string name="volume_steps_60">60</string>
+    <string name="volume_steps_45">45</string>
+    <string name="volume_steps_30">30</string>
+    <string name="volume_steps_15">15</string>
+    <string name="volume_steps_7">7</string>
+    <string name="volume_steps_5">5</string>
+
+    <!-- Wake on Plug -->
+    <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
+    <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
+
+    <!-- Scrolling Cache -->
+    <string name="pref_scrollingcache_title">Scrolling cache</string>
+    <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
+    <string name="pref_scrollingcache_force_enable">Force enable</string>
+    <string name="pref_scrollingcache_default_enable">Default enable</string>
+    <string name="pref_scrollingcache_default_disable">Default disable</string>
+    <string name="pref_scrollingcache_force_disable">Force disable</string>
+
+    <!-- Notification Count in Statusbar -->
+    <string name="statusbar_notifications_category">Notifications</string>
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
+    <!-- Status bar brightness control -->
+    <string name="status_bar_brightness_control_title">Brightness control</string>
+    <string name="status_bar_brightness_control_summary">Adjust brightness by sliding across status bar</string>
+    <string name="status_bar_brightness_control_info">Automatic brightness must be disabled</string>
+
+    <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
+
+    <!-- Battery customizations -->
+    <string name="status_bar_battery_style_category">Battery</string>
+    <string name="battery_summary">Enable various battery options in statusbar</string>
+    <string name="status_bar_battery_style_title">Battery status style</string>
+    <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_bigcircle">Big Circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Hidden</string>
+    <string name="status_bar_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_battery_percentage_default">Hidden</string>
+    <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+    <string name="status_bar_battery_style_tile_title">Custom battery tile style</string>
+    <string name="status_bar_battery_style_tile_summary">Allow to set the same icon style chosen for the statusbar battery</string>
+    <string name="force_charge_battery_text_title">Show percentage near battery when charging</string>
+    <string name="force_charge_battery_text_summary_on">Show the battery percentage outside the icon when charging</string>
+    <string name="force_charge_battery_text_summary_off">Show the battery percentage inside the icon when charging</string>
+    <string name="text_charging_symbol_title">Charging symbol near percentage text</string>
+    <string name="text_charging_symbol_dialog">Show a symbol near percentage text outside the battery icon when charging</string>
+    <string name="text_charging_symbol_default">Disabled</string>
+    <string name="text_charging_symbol_flash">Flash</string>
+    <string name="text_charging_symbol_tilde">Tilde</string>
+</resources>
