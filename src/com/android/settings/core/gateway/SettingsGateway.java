@@ -147,7 +147,6 @@ import com.android.settings.wifi.calling.WifiCallingSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.tether.WifiTetherSettings;
-import com.android.settings.GesturesSettings;
 
 import org.candy.candyshop.CandyShop;
 
@@ -289,7 +288,6 @@ public class SettingsGateway {
             GlobalActionsPanelSettings.class.getName(),
             // Candy additions start
             CandyShop.class.getName(),
-            GesturesSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
