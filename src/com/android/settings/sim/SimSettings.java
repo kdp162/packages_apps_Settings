@@ -37,6 +37,7 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceGroup;
 import android.support.v7.preference.PreferenceManager;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.PreferenceViewHolder;
@@ -97,7 +98,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
     private List<SubscriptionInfo> mAvailableSubInfos = null;
     private List<SubscriptionInfo> mSubInfoList = null;
     private List<SubscriptionInfo> mSelectableSubInfos = null;
-    private PreferenceCategory mSimCards = null;
+    private PreferenceGroup mSimCards = null;
     private SubscriptionManager mSubscriptionManager;
     private int mNumSlots;
     private Context mContext;
@@ -138,7 +139,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         addPreferencesFromResource(R.xml.sim_settings);
 
         mNumSlots = tm.getSimCount();
-        mSimCards = (PreferenceCategory)findPreference(SIM_CARD_CATEGORY);
+        mSimCards = (PreferenceGroup)findPreference(SIM_CARD_CATEGORY);
         mAvailableSubInfos = new ArrayList<SubscriptionInfo>(mNumSlots);
         mSelectableSubInfos = new ArrayList<SubscriptionInfo>();
         SimSelectNotification.cancelNotification(getActivity());
@@ -363,12 +364,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         Context mContext;
 
         public SimPreference(Context context, SubscriptionInfo subInfoRecord, int slotId) {
-            this(context, null, 0, subInfoRecord, slotId);
-        }
-
-        public SimPreference(Context context, AttributeSet attrs, int defStyle,
-                SubscriptionInfo subInfoRecord, int slotId) {
-            super(context, attrs, defStyle);
+            super(context);
             mContext = context;
             mSubInfoRecord = subInfoRecord;
             mSlotId = slotId;
@@ -426,6 +422,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
 
         private boolean mCurrentUiccProvisionState;
         private boolean mIsChecked;
+
         private boolean mCmdInProgress = false;
         private CompoundButton mSwitch;
         //Delay for progress dialog to dismiss
@@ -433,8 +430,8 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         private static final int MSG_DELAY_TIME = 2000;
 
         public SimEnablerPreference(Context context, SubscriptionInfo sir, int slotId) {
-            super(context, null, com.android.internal.R.attr.checkBoxPreferenceStyle, sir, slotId);
-            setWidgetLayoutResource(R.layout.candy_sim_switch);
+            super(context, sir, slotId);
+            setWidgetLayoutResource(R.layout.custom_sim_switch);
         }
 
         private void sendMessage(int event, Handler handler, int delay) {
@@ -474,7 +471,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
                 mSwitch.setVisibility(View.GONE);
             } else {
                 mSwitch.setVisibility(View.VISIBLE);
-                mSwitch.setEnabled(!isAirplaneModeOn() && isValid());
+                mSwitch.setEnabled(!isAirplaneModeOn() || isValid());
                 setChecked(getProvisionStatus(mSlotId) == PROVISIONED);
             }
         }
@@ -686,7 +683,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
                 case ERROR_ALERT_DLG_ID:
                     builder.setMessage(mContext.getString(msgId));
                     builder.setNeutralButton(android.R.string.ok, mDialogClickListener);
-                    builder.setCancelable(false);
+                    builder.setOnCancelListener(mDialogCanceListener);
                     break;
 
                 case RESULT_ALERT_DLG_ID:
