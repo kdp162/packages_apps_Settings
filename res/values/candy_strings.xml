@@ -45,4 +45,10 @@
     <string name="summary_dashboard_suggestions_enabled">Dashboard suggestions are enabled</string>
     <string name="summary_dashboard_suggestions_disabled">Dashboard suggestions are disabled</string>
 
+    <!-- Candy Updater -->
+    <string name="update_settings_title">Candy Updater</string>
+    <string name="update_settings_summary">Check for the latest version of Candy</string>
+    <string name="update_package" translatable="false">org.candy.updater</string>
+    <string name="update_activity" translatable="false">org.candy.updater.UpdatesActivity</string>
+
 </resources>
