@@ -28,8 +28,20 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.dashboard.SummaryLoader;
+import com.android.settings.deviceinfo.BasebandVersionPreferenceController;
+import com.android.settings.deviceinfo.BuildNumberPreferenceController;
+import com.android.settings.deviceinfo.DeviceModelPreferenceController;
+import com.android.settings.deviceinfo.FccEquipmentIdPreferenceController;
+import com.android.settings.deviceinfo.FeedbackPreferenceController;
 import com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController;
+import com.android.settings.deviceinfo.imei.ImeiInfoDualSimPreferenceController;
 import com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController;
+import com.android.settings.deviceinfo.imei.ImeiInfoPreferenceControllerV2;
+import com.android.settings.deviceinfo.KernelVersionPreferenceController;
+import com.android.settings.deviceinfo.ManualPreferenceController;
+import com.android.settings.deviceinfo.RegulatoryInfoPreferenceController;
+import com.android.settings.deviceinfo.SafetyInfoPreferenceController;
+import com.android.settings.deviceinfo.SecurityPatchPreferenceController;
 import com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -123,6 +135,38 @@ public class DeviceInfoSettings extends DashboardFragment implements Indexable {
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(Context context,
             Activity activity, Fragment fragment, Lifecycle lifecycle) {
+        if (FeatureFlagUtils.isEnabled(DEVICE_INFO_V2_FEATURE_FLAG)) {
+            final List<AbstractPreferenceController> controllers = new ArrayList<>();
+            // Device name
+
+            // Phone number
+
+            // SIM status
+
+            controllers.add(new DeviceModelPreferenceController(context, fragment));
+
+            controllers.add(new ImeiInfoPreferenceControllerV2(context, fragment));
+
+            controllers.add(new ImeiInfoDualSimPreferenceController(context, fragment));
+
+            // Android version
+
+            // IP address
+
+            // Wifi MAC address
+
+            // Bluetooth Address
+
+            controllers.add(new RegulatoryInfoPreferenceController(context));
+
+            controllers.add(new SafetyInfoPreferenceController(context));
+
+            controllers.add(
+                    new BuildNumberPreferenceController(context, activity, fragment, lifecycle));
+
+            return controllers;
+        }
+
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new SimStatusPreferenceController(context, fragment));
         controllers.add(new DeviceModelPreferenceController(context, fragment));
