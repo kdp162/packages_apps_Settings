@@ -46,6 +46,10 @@ public class ImeiInfoDialogController {
     @VisibleForTesting
     static final int ID_MEID_NUMBER_VALUE = R.id.meid_number_value;
     @VisibleForTesting
+    static final int ID_ICC_ID_LABEL = R.id.icc_id_label;
+    @VisibleForTesting
+    static final int ID_ICC_ID_VALUE = R.id.icc_id_value;
+    @VisibleForTesting
     static final int ID_IMEI_VALUE = R.id.imei_value;
     @VisibleForTesting
     static final int ID_IMEI_SV_VALUE = R.id.imei_sv_value;
@@ -107,10 +111,12 @@ public class ImeiInfoDialogController {
     private void updateDialogForCdmaPhone() {
         final Resources res = mDialog.getContext().getResources();
         mDialog.setText(ID_MEID_NUMBER_VALUE, getMeid());
+
         // MIN needs to read from SIM. So if no SIM, we should not show MIN on UI
-        mDialog.setText(ID_MIN_NUMBER_VALUE, mSubscriptionInfo != null
-                ? mTelephonyManager.getCdmaMin(mSubscriptionInfo.getSubscriptionId())
-                : "");
+        mDialog.setText(ID_MIN_NUMBER_VALUE,
+                mSubscriptionInfo != null ? mTelephonyManager.getCdmaMin(
+                        mSubscriptionInfo.getSubscriptionId()) : "");
+        mTelephonyManager.getCdmaMin(mSubscriptionInfo.getSubscriptionId());
 
         if (res.getBoolean(R.bool.config_msid_enable)) {
             mDialog.setText(ID_MIN_NUMBER_LABEL,
@@ -121,6 +127,8 @@ public class ImeiInfoDialogController {
 
         if (mSubscriptionInfo != null && isCdmaLteEnabled()) {
             // Show IMEI for LTE device
+            // Show ICC ID and IMEI for LTE device
+            mDialog.setText(ID_ICC_ID_VALUE, mSubscriptionInfo.getIccId());
             mDialog.setText(ID_IMEI_VALUE,
                     getTextAsDigits(mTelephonyManager.getImei(mSlotId)));
             mDialog.setText(ID_IMEI_SV_VALUE,
@@ -128,6 +136,8 @@ public class ImeiInfoDialogController {
         } else {
             // device is not GSM/UMTS, do not display GSM/UMTS features
             mDialog.removeViewFromScreen(ID_GSM_SETTINGS);
+            mDialog.removeViewFromScreen(ID_ICC_ID_LABEL);
+            mDialog.removeViewFromScreen(ID_ICC_ID_VALUE);
         }
     }
 
@@ -137,6 +147,8 @@ public class ImeiInfoDialogController {
                 getTextAsDigits(mTelephonyManager.getDeviceSoftwareVersion(mSlotId)));
         // device is not CDMA, do not display CDMA features
         mDialog.removeViewFromScreen(ID_CDMA_SETTINGS);
+        mDialog.removeViewFromScreen(ID_ICC_ID_LABEL);
+        mDialog.removeViewFromScreen(ID_ICC_ID_VALUE);
     }
 
     @VisibleForTesting

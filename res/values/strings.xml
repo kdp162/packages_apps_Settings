@@ -3101,7 +3101,9 @@
     <!-- [CHAR LIMIT=100] Main settings screen item's summary for the SD card and storage settings -->
     <string name="storage_settings_summary" product="default">Unmount SD card, view available storage</string>
     <!-- About phone screen, title for IMEI for multi-sim devices -->
-    <string name="imei_multi_sim">IMEI (sim slot %1$d)</string>
+    <string name="imei_multi_sim_slot_1">IMEI (sim slot 1)</string>
+    <!-- About phone screen, title for IMEI for multi-sim devices -->
+    <string name="imei_multi_sim_slot_2">IMEI (sim slot 2)</string>
     <!-- Do not translate. About phone, status item title -->
     <string name="status_imei">IMEI</string>
     <!-- Do not translate. About phone, status item title -->
@@ -3127,7 +3129,9 @@
     <!-- About phone, status item title.  The phone PRL Version of the current device.-->
     <string name="status_prl_version">PRL version</string>
     <!-- About phone screen, title for MEID for multi-sim devices -->
-    <string name="meid_multi_sim">MEID (sim slot %1$d)</string>
+    <string name="meid_multi_sim_sim_slot_1">MEID (sim slot 1)</string>
+    <!-- About phone screen, title for MEID for multi-sim devices -->
+    <string name="meid_multi_sim_sim_slot_2">MEID (sim slot 2)</string>
     <!-- The status text when both Wi-Fi scanning and Bluetooth scanning are on. [CHAR LIMIT=100] -->
     <string name="scanning_status_text_wifi_on_ble_on">Both Wi\u2011Fi and Bluetooth scanning are on</string>
     <!-- The status text when Wi-Fi scanning is on and Bluetooth scanning are off. [CHAR LIMIT=100] -->
