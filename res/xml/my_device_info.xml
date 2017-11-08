@@ -48,10 +48,32 @@
         android:title="@string/rom_version_title"
         android:summary="@string/device_info_default"/>
 
+    <!-- Phone number -->
+    <Preference
+        android:key="phone_number"
+        android:order="0"
+        android:title="@string/status_number"
+        android:summary="@string/summary_placeholder"
+        android:selectable="false"/>
+
     <Preference
         android:key="emergency_info"
         android:order="4"
         android:title="@string/emergency_info_title"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- SIM status Sim Slot 1 -->
+    <Preference
+        android:key="sim_status_sim_1"
+        android:order="10"
+        android:title="@string/sim_status_title"
+        android:summary="@string/summary_placeholder"/>
+
+    <!-- SIM status Sim Slot 2 -->
+    <Preference
+        android:key="sim_status_sim_2"
+        android:order="11"
+        android:title="@string/sim_status_title_sim_slot_2"
         android:summary="@string/summary_placeholder"/>
 
     <!-- Legal information -->
@@ -95,17 +117,11 @@
         settings:keywords="@string/keywords_model_and_hardware"
         android:summary="@string/summary_placeholder"/>
 
-    <!-- IMEI Sim Slot 1 -->
+    <!-- IMEI -->
     <Preference
-        android:key="imei_info_sim_slot_1"
+        android:key="imei_info"
+        android:order="22"
         android:title="@string/status_imei"
-        settings:keywords="@string/keywords_imei_info"
-        android:summary="@string/summary_placeholder"/>
-
-    <!-- IMEI Sim Slot 2 -->
-    <Preference
-        android:key="imei_info_sim_slot_2"
-        android:title="@string/imei_multi_sim_slot_2"
         settings:keywords="@string/keywords_imei_info"
         android:summary="@string/summary_placeholder"/>
 
@@ -120,7 +136,7 @@
     <!--IP address -->
     <Preference
         android:key="wifi_ip_address"
-        android:order="34"
+        android:order="33"
         android:title="@string/wifi_ip_address"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
@@ -129,7 +145,7 @@
     <!-- Wi-Fi MAC address -->
     <Preference
         android:key="wifi_mac_address"
-        android:order="35"
+        android:order="34"
         android:title="@string/status_wifi_mac_address"
         android:summary="@string/summary_placeholder"
         android:selectable="false"/>
@@ -137,7 +153,7 @@
     <!-- Bluetooth address -->
     <Preference
         android:key="bt_address"
-        android:order="36"
+        android:order="35"
         android:title="@string/status_bt_address"
         android:summary="@string/summary_placeholder"
         android:selectable="false"/>
@@ -146,7 +162,8 @@
     <Preference
         android:key="device_feedback"
         android:order="41"
-        android:title="@string/device_feedback"/>
+        android:title="@string/device_feedback"
+        android:summary="@string/summary_placeholder"/>
 
     <!-- Device FCC equipment id -->
     <Preference
@@ -154,11 +171,12 @@
         android:order="42"
         android:title="@string/fcc_equipment_id"
         android:summary="@string/summary_placeholder"/>
+    </Preference>
 
     <!-- Build number -->
     <Preference
         android:key="build_number"
-        android:order="43"
+        android:order="39"
         android:title="@string/build_number"
         android:summary="@string/summary_placeholder"
         settings:allowDividerAbove="true"/>
