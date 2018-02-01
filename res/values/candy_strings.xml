@@ -187,4 +187,7 @@
     <!-- Toolbar -->
     <string name="settings_head_title">CANDY</string>
 
+    <!-- Notification log -->
+    <string name="notification_log_summary">Show notification history log</string>
+
 </resources>
