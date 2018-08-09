@@ -190,4 +190,7 @@
     <!-- Notification log -->
     <string name="notification_log_summary">Show notification history log</string>
 
+    <!-- Candy version -->
+    <string name="candy_version">Candy version</string>
+
 </resources>
