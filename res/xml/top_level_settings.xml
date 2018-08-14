@@ -21,6 +21,15 @@
     android:key="top_level_settings">
 
     <Preference
+        android:key="top_level_candy"
+        android:title="@string/candyshop_title"
+        android:summary="@string/candyshop_summary_title"
+        android:icon="@drawable/ic_settings_candyshop"
+        android:order="-130"
+        android:fragment="org.candy.candyshop.CandyShop"
+        settings:controller="org.candy.CandyShop.TopLevelCandyEntryPreferenceController" />
+
+    <Preference
         android:key="top_level_network"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"
