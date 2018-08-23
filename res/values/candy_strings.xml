@@ -57,7 +57,6 @@
     <string name="build_date_default">2015-01-01-0000</string>
     <string name="keywords_build_date">build date, build info</string>
 
-
     <!-- SELinux status -->
     <string name="selinux_status">SELinux status</string>
     <string name="selinux_status_disabled">Disabled</string>
@@ -101,4 +100,11 @@
     <string name="theme_customization_accent_color_title">Accent color</string>
     <string name="theme_customization_font_title">Headline / Body font</string>
     <string name="theme_customization_icon_shape_title">Icon shape</string>
+
+    <!-- Custom light color -->
+    <string name="custom_light_title">Light color</string>
+    <string name="custom_light_on_time_title">Light ON time during led pulse (ms)</string>
+    <string name="custom_light_off_time_title">Light OFF time during led pulse (ms)"</string>
+    <string name="value_equals_default">def</string>
+
 </resources>
