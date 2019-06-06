@@ -171,6 +171,7 @@ public class Settings extends SettingsActivity {
     public static class SmartbarSettingsActivity extends SettingsActivity {}
     public static class FlingSettingsActivity extends SettingsActivity {}
     public static class PulseSettingsActivity extends SettingsActivity {}
+    public static class StockNavigationActivity extends SettingsActivity {}
 
     // Candy additions
     public static class CandyShopActivity extends SettingsActivity {}
