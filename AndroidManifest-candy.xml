@@ -31,6 +31,7 @@
             android:icon="@drawable/ic_settings_candyshop" >
             <intent-filter android:priority="12">
                 <action android:name="com.android.settings.action.SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.homepage"/>
@@ -41,7 +42,15 @@
         </activity>
 
         <!-- Hide Apps from Recents (HAFR) -->
-        <activity android:name="org.candy.candyshop.fragments.hideappfromrecents.HAFRAppListActivity" />
+        <activity android:name="org.candy.candyshop.fragments.hideappfromrecents.HAFRAppListActivity"
+            android:label="@string/hide_apps_from_recents_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="org.candy.candyshop.fragments.hideappfromrecents.HAFRAppListActivity" />
+        </activity>
 
     </application>
 </manifest>
