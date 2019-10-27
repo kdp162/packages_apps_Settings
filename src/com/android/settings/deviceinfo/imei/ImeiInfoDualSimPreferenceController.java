@@ -16,7 +16,7 @@
 
 package com.android.settings.deviceinfo.imei;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.content.Context;
 
 import com.android.settings.R;

@@ -18,7 +18,7 @@ package com.android.settings.deviceinfo.imei;
 
 import static android.telephony.TelephonyManager.PHONE_TYPE_CDMA;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.content.Context;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
