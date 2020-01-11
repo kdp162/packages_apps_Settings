@@ -326,6 +326,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
 
             // Home page > CandyShop
-            // Settings.CandyShopActivity.class.getName(),
+            Settings.CandyShopActivity.class.getName(),
     };
 }

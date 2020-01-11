@@ -178,5 +178,5 @@ public class Settings extends SettingsActivity {
     public static class SystemDashboardActivity extends SettingsActivity {}
 
     // Candy additions start
-    //public static class CandyShopActivity extends SettingsActivity {}
+    public static class CandyShopActivity extends SettingsActivity {}
 }

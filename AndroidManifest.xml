@@ -3278,17 +3278,28 @@
         <!-- This is the longest AndroidManifest.xml ever. -->
 
         <!-- Candy additions start -->
-        <!--<activity android:name=".Settings$CandyShopActivity"
+        <activity android:name=".Settings$CandyShopActivity"
                   android:label="@string/candyshop_title"
                   android:theme="@style/Theme.SubSettings"
                   android:icon="@drawable/ic_settings_candyshop" >
-            <intent-filter>
-                 <action android:name="com.android.settings.action.SETTINGS" />
+            <intent-filter android:priority="1">
+                <action android:name="org.candy.candyshop.CandyShop" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                  android:value="org.candy.candyshop.CandyShop"/>
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
             <meta-data android:name="com.android.settings.summary"
                  android:resource="@string/candyshop_summary_title"/>
-        </activity>-->
+        </activity>
     </application>
 </manifest>
